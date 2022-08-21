@@ -1,0 +1,50 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "apache-kafka-consumer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-apache-kafka-consumer",
+            "program": "${workspaceFolder}/src/apache-kafka-consumer/bin/Debug/net6.0/apache-kafka-consumer.dll",
+            "args": [
+                "bootstrap-servers",
+                "sasl-username",
+                "sasl-password",
+                "topic-name",
+                "group-id"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "apache-kafka-producer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-apache-kafka-producer",
+            "program": "${workspaceFolder}/src/apache-kafka-producer/bin/Debug/net6.0/apache-kafka-producer.dll",
+            "args": [
+                "bootstrap-servers",
+                "sasl-username",
+                "sasl-password",
+                "topic-name",
+                "group-id"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "minimal-api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-minimal-api",
+            "program": "${workspaceFolder}/src/minimal-api/bin/Debug/net6.0/minimal-api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        }
+    ]
+}
